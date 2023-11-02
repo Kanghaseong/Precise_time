@@ -1,0 +1,55 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin-left: 1rem;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+#clock {
+  font-size: 13rem;
+  font-family: monospace;
+  font-weight: bold;
+}
+
+#hour-label,
+#minute-label,
+#second-label {
+  font-size: 4rem;
+}
+
+#loadTime {
+  font-size: 1.5rem;
+}
+
+[data-descr] {
+  position: relative;
+  text-decoration: underline;
+  cursor: help;
+}
+
+[data-descr]:hover::after,
+[data-descr]:focus::after {
+  content: attr(data-descr);
+  position: absolute;
+  left: 0;
+  top: 36px;
+  min-width: 200px;
+  border: 1px #aaaaaa solid;
+  border-radius: 10px;
+  background-color: #ffffcc;
+  padding: 12px;
+  color: #000000;
+  font-size: 20px;
+  z-index: 1;
+}
