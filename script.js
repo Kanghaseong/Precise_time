@@ -1,4 +1,4 @@
-let startTime = new Date().getTime(); // 페이지 로딩 시작 시간
+let startTime = new Date().getTime(); //(자바스크립트 실행 시작시긴)
 
 window.onload = function () {
   let endTime = new Date().getTime(); // 페이지가 완전히 로드된 시간
