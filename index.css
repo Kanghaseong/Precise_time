@@ -51,8 +51,8 @@ h3 {
 }
 
 .refresh {
-  width: 10rem;
-  margin: 2rem 0 0 2.5rem;
+  width: 8rem;
+  margin: 3rem 0 0 2.5rem;
   font-size: large;
 }
 
@@ -72,7 +72,7 @@ h3 {
   border: 1px #aaaaaa solid;
   border-radius: 10px;
   background-color: #ffffcc;
-  padding: 8px;
+  padding: 4px;
   color: #000000;
   font-size: 20px;
   z-index: 1;
