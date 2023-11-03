@@ -3,7 +3,7 @@
 
 <head>
 
-  <script src="script.js" defer></script>
+  <script src="script.js" async></script>
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7899610687722451"
     crossorigin="anonymous"></script>
   <meta name="google-site-verification" content="RyzxqLn9xvtWS8fBeAkAHAC--7oaGt9HKLV6lyYiyKE" />
@@ -21,17 +21,18 @@
 <body>
   <div class="container">
     <header>
-      <h1>정확한 시간</h1>
-      <h2>the time now</h2>
+      <h1>정확한 시간,</h1>
+      <h2>the time now.</h2>
     </header>
 
-    <h3 id="date"></h3>
+
     <div id="clock">
-      <span id="hours"></span><span id="hour-label"></span>
-      <span id="minutes"></span><span id="minute-label"></span>
-      <span id="seconds"></span><span id="second-label"></span>
-      <span id="milliseconds"></span><span id="millisecond-label"></span>
+      <span id="hours"></span><span class="titme-labels" id="hour-label"></span>
+      <span id="minutes"></span><span class="titme-labels" id="minute-label"></span>
+      <span id="seconds"></span><span class="titme-labels" id="second-label"></span>
+      <span id="milliseconds"></span><span class="titme-labels" id="millisecond-label"></span>
     </div>
+    <h3 id="date"></h3>
     <span id="loadTime" data-descr="페이지 로딩시간도 타이머에 더해졌습니다."></span>
     <button class="refresh" onclick="location.reload();">새로고침</button>
   </div>

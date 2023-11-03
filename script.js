@@ -1,4 +1,4 @@
-let startTime = new Date().getTime(); //(자바스크립트 실행 시작시긴)
+let startTime = new Date().getTime(); //(자바스크립트 실행 시작시간)
 
 window.onload = function () {
   let endTime = new Date().getTime(); // 페이지가 완전히 로드된 시간
@@ -7,6 +7,10 @@ window.onload = function () {
   // 시간을 초로 변환하여 표시
   let timeInSeconds = (timeTaken / 1000).toFixed(2);
   document.getElementById("loadTime").textContent = "페이지 로딩 시간: " + timeInSeconds + "초";
+
+  displayDate();
+  // 30밀리초마다 updateTime 함수를 호출
+  setInterval(updateTime, 30);
 };
 
 function updateTime() {
@@ -31,13 +35,10 @@ function updateTime() {
   document.getElementById("millisecond-label").textContent = timeLabels.millisecond;
 }
 
-function displayDateAndDay() {
+function displayDate() {
   const now = new Date();
   const days = ["일", "월", "화", "수", "목", "금", "토"];
   const dayName = days[now.getDay()];
   const dateString = now.toLocaleDateString();
   document.getElementById("date").innerHTML = `${dateString} (${dayName})`;
 }
-displayDateAndDay();
-// 30밀리초마다 updateTime 함수를 호출
-setInterval(updateTime, 30);
