@@ -28,5 +28,13 @@ function updateTime() {
   document.getElementById("milliseconds").textContent = milliseconds + "ms";
 }
 
+function displayDateAndDay() {
+  const now = new Date();
+  const days = ["일", "월", "화", "수", "목", "금", "토"];
+  const dayName = days[now.getDay()];
+  const dateString = now.toLocaleDateString();
+  document.getElementById("dateAndDay").innerHTML = `${dateString} (${dayName})`;
+}
+displayDateAndDay();
 // 30밀리초마다 updateTime 함수를 호출
 setInterval(updateTime, 30);
