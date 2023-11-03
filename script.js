@@ -33,7 +33,7 @@ function displayDateAndDay() {
   const days = ["일", "월", "화", "수", "목", "금", "토"];
   const dayName = days[now.getDay()];
   const dateString = now.toLocaleDateString();
-  document.getElementById("dateAndDay").innerHTML = `${dateString} (${dayName})`;
+  document.getElementById("date").innerHTML = `${dateString} (${dayName})`;
 }
 displayDateAndDay();
 // 30밀리초마다 updateTime 함수를 호출
