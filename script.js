@@ -12,7 +12,9 @@ window.onload = function () {
 function updateTime() {
   const currentTime = new Date();
   const userLang = navigator.language || navigator.userLanguage;
-  const timeLabels = userLang.startsWith("ko") ? { hour: "시", minute: "분", second: "초" } : { hour: "h", minute: "m", second: "s" };
+  const timeLabels = userLang.startsWith("ko")
+    ? { hour: "시", minute: "분", second: "초", millisecond: "ms" }
+    : { hour: "h", minute: "m", second: "s", millisecond: "ms" };
 
   const hours = String(currentTime.getHours()).padStart(2, "0");
   const minutes = String(currentTime.getMinutes()).padStart(2, "0");
@@ -25,7 +27,8 @@ function updateTime() {
   document.getElementById("minute-label").textContent = timeLabels.minute;
   document.getElementById("seconds").textContent = seconds;
   document.getElementById("second-label").textContent = timeLabels.second;
-  document.getElementById("milliseconds").textContent = milliseconds + "ms";
+  document.getElementById("milliseconds").textContent = milliseconds;
+  document.getElementById("millisecond-label").textContent = timeLabels.millisecond;
 }
 
 function displayDateAndDay() {

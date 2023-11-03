@@ -9,13 +9,12 @@ body {
 .container {
   display: flex;
   flex-direction: column;
-  position: relative;
-  margin-left: 1rem;
 }
 
 header {
   display: flex;
   flex-direction: column;
+  margin: 0 0 0 1.5rem
 }
 
 h1 {
@@ -35,13 +34,14 @@ h3 {
 #clock {
   font-size: 12rem;
   font-family: monospace;
-  font-weight: bold;
+
   margin: 0 0 0 2rem;
 }
 
 #hour-label,
 #minute-label,
-#second-label {
+#second-label,
+#millisecond-label {
   font-size: 4rem;
 }
 
@@ -50,9 +50,9 @@ h3 {
   margin: 0 0 0 2.5rem
 }
 
-button {
+.refresh {
   width: 10rem;
-  margin: 4rem 0 0 2.5rem;
+  margin: 2rem 0 0 2.5rem;
   font-size: large;
 }
 
